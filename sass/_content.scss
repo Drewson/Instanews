@@ -1,0 +1,13 @@
+
+#newsFlex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    li {
+        flex: 1 0 25%;
+    }
+
+    img {
+        width: 100%;
+    }
+}
