@@ -23,22 +23,14 @@ $(function(){
 
             $.each(array, function(){
                 
-                for (var i = 0 ; i < 13){
-                    if(this.multimedia.length !== 0 ) {
+                if(this.multimedia.length !== 0 ) {
                         
-                        var image = this.multimedia[0].url;
-                        var small = 'thumbStandard';
-                        var big = 'superJumbo';
+                    var image = this.multimedia[3].url;
 
-                        image = image.replace(small, big);
+                    $('#newsFlex').append('<li>' + '<img src="' + image + '">' + '</li>')
 
-                        $('#newsFlex').append('<li>' + '<img src="' + image + '">' + '</li>')
-                        i++;
-                    } else {
-                        return true;
-                    }
-
-
+                } else {
+                    return true;
                 }
             })
         })
