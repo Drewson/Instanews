@@ -11,11 +11,12 @@
 
 <body>
     <header>
-        <div>
+        <div id="iconContainer">
             <img src="images/nyt-logo.svg" alt="times">
-            <form>
-                <label>Choose a section:</label>
-                <select name="sections" id="categories">
+        </div>
+        <form id="categoriesContainer">
+            <label>Choose a section:</label>
+            <select name="sections" id="categories">
                 <option value="1">Sections...</option>
                 <option value="Home">Home</option>
                 <option value="Science">Science</option>
@@ -24,8 +25,7 @@
                 <option value="Technology">Technology</option>
                 <option value="Fashion">Fashion</option>
             </select>
-            </form>
-        </div>
+        </form>
     </header>
     <div id="mainContent">
         <ul id="newsFlex">
@@ -33,7 +33,7 @@
     </div>
     <footer>
         <div>
-            <p>&copy; Copyright 2016 Instanews</p>
+            <p>&copy; Copyright 2016 INSTANEWS</p>
         </div>
     </footer>
     <script src="JQuery/jquery-3.1.1.min.js"></script>

@@ -34,7 +34,7 @@ $(function(){
                     $('#newsFlex').append('<li>' + '<p>' + articleText + '</p>' + 
                                             '<img src="' + image + '">'  + '</li>');
 
-                } else if (i == 12){
+                } else  {
                     return false;
                 }
             })
