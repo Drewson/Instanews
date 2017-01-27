@@ -23,14 +23,19 @@ $(function(){
 
             $.each(array, function(){
                 
+                var i = 0;
+
                 if(this.multimedia.length !== 0 ) {
                         
-                    var image = this.multimedia[3].url;
+                    var image = this.multimedia[4].url;
+                    var articleText = this.abstract;
 
-                    $('#newsFlex').append('<li>' + '<img src="' + image + '">' + '</li>')
 
-                } else {
-                    return true;
+                    $('#newsFlex').append('<li>' + '<p>' + articleText + '</p>' + 
+                                            '<img src="' + image + '">'  + '</li>');
+
+                } else if (i == 12){
+                    return false;
                 }
             })
         })
@@ -38,7 +43,7 @@ $(function(){
             
         })
         .always(function(){
-            
+            $('header').addClass('animateHead');
         })
 
     })
