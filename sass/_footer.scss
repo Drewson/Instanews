@@ -1,6 +1,7 @@
 footer {
     display: flex;
     justify-content: center;
+    padding: 20px;
 
     div {
         display: flex;
@@ -11,9 +12,10 @@ footer {
             text-align: center;
 
         }
-
-
     }
 
-    
+    @include desktop {
+        justify-content: flex-start;
+
+    }    
 }

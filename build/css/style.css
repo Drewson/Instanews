@@ -103,12 +103,31 @@ header {
         flex-direction: column;
     display: -ms-flexbox;
     display: flex; }
+    header div form {
+      margin: 0 auto;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+      header div form label {
+        text-align: center;
+        font-family: 'Open Sans Light';
+        font-size: 14px;
+        margin: 15px 0 15px 0;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+      header div form select {
+        margin: 10px 0; }
     @media (min-width: 600px) and (max-width: 999px) {
       header div {
         -ms-flex-direction: row;
             flex-direction: row; }
         header div img {
-          width: 21vw; } }
+          width: 21vw; }
+        header div label {
+          font-size: 16px; } }
     @media (min-width: 1000px) {
       header div {
         -ms-flex-direction: row;
@@ -122,22 +141,6 @@ header {
   width: 130px;
   font-size: 20px;
   height: 25px; }
-
-form {
-  margin: 0 auto;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-direction: column;
-      flex-direction: column; }
-  form label {
-    text-align: center;
-    font-family: 'Open Sans Light';
-    font-size: 14px;
-    margin: 15px 0 15px 0;
-    -ms-flex-pack: start;
-        justify-content: flex-start; }
 
 .animateHead {
   -ms-flex-line-pack: start;
@@ -213,7 +216,8 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+  padding: 20px; }
   footer div {
     display: -ms-flexbox;
     display: flex;
@@ -222,3 +226,7 @@ footer {
     footer div p {
       color: #c2c2c2;
       text-align: center; }
+  @media (min-width: 1000px) {
+    footer {
+      -ms-flex-pack: start;
+          justify-content: flex-start; } }

@@ -26,12 +26,36 @@ header {
         flex-direction: column;
         display: flex;
 
+        form {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            label {
+                text-align: center;
+                font-family: 'Open Sans Light';
+                font-size: 14px;
+                margin: 15px 0 15px 0;
+                justify-content: flex-start;
+            }
+
+            select {
+                margin: 10px 0;
+            }
+
+        }
+
         @include tablet {
             flex-direction: row;
 
             img {
                 // padding: 30px;
                 width: 21vw;
+            }
+
+            label {
+                font-size: 16px;
             }
 
         }
@@ -53,21 +77,6 @@ header {
     height: 25px;
 }
 
-form {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    label {
-        text-align: center;
-        font-family: 'Open Sans Light';
-        font-size: 14px;
-        margin: 15px 0 15px 0;
-        justify-content: flex-start;
-    }
-
-}
 
 .animateHead {
     align-content: flex-start;
