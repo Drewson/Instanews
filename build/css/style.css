@@ -108,7 +108,7 @@ header {
         -ms-flex-direction: row;
             flex-direction: row; }
         header div img {
-          padding: 30px; } }
+          width: 21vw; } }
     @media (min-width: 1000px) {
       header div {
         -ms-flex-direction: row;
@@ -208,3 +208,17 @@ form {
       position: relative;
       height: 100%;
       z-index: -1; }
+
+footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  footer div {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    footer div p {
+      color: #c2c2c2;
+      text-align: center; }
