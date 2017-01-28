@@ -184,7 +184,9 @@ header {
     -ms-flex-pack: center;
         justify-content: center;
     -ms-flex-align: center;
-        align-items: center; }
+        align-items: center;
+    background-size: cover;
+    background-color: red; }
     @media (min-width: 600px) and (max-width: 999px) {
       #newsFlex li {
         -ms-flex: 1 0 50%;

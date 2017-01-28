@@ -1,14 +1,12 @@
 $(function(){
 
      var chosenCategory = $('#categories option:selected').text(); 
-        console.log(chosenCategory)
 
     $('#categories').change( '#categories option:selected', function(event){
         event.preventDefault();
         $('#newsFlex').empty();
 
         var chosenCategory = $('#categories option:selected').text().toLowerCase(); 
-        console.log(chosenCategory)
 
         var url = 'https://api.nytimes.com/svc/topstories/v2/' + chosenCategory + '.json';
         url += '?' + $.param({'api-key': 'da52f7a32bda4e16bac25f88e3162265'});
@@ -18,26 +16,25 @@ $(function(){
             url : url
         })
         .done(function(data){
-            console.log(data);
-            var array = data.results
+            var resultsArray = data.results
+            var listAppendage = '';
 
-            $.each(array, function(){
-                
-                var i = 0;
-
-                if(this.multimedia.length !== 0 ) {
-                        
-                    var image = this.multimedia[4].url;
-                    var articleText = this.abstract;
+            var filteredArray = resultsArray.filter(function(value){
+                return value.multimedia.length > 0;
+            }).slice(0,12);
 
 
-                    $('#newsFlex').append('<li>' + '<p>' + articleText + '</p>' + 
-                                            '<img src="' + image + '">'  + '</li>');
+            $.each(filteredArray, function(key, value){
+                var image = value.multimedia[4].url;
+                var articleText = value.abstract;
 
-                } else  {
-                    return false;
-                }
+                listAppendage += '<li class="imageList"><p>';
+                listAppendage += articleText + '</p><div class="bkg"></li>';
+                listAppendage += '</div>';
+                $('.bkg').css('background-image', 'url(' + image + ')');//stlye tag alink
             })
+
+            $('#newsFlex').append(listAppendage);
         })
         .fail(function(){
             
@@ -45,7 +42,5 @@ $(function(){
         .always(function(){
             $('header').addClass('animateHead');
         })
-
     })
-
-});
+})
