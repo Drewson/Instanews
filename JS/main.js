@@ -27,11 +27,13 @@ $(function(){
             $.each(filteredArray, function(key, value){
                 var image = value.multimedia[4].url;
                 var articleText = value.abstract;
-
-                listAppendage += '<li class="imageList"><p>';
-                listAppendage += articleText + '</p><div class="bkg"></li>';
-                listAppendage += '</div>';
-                $('.bkg').css('background-image', 'url(' + image + ')');//stlye tag alink
+                var articleLink = value.url;
+            
+                listAppendage += '<li class="imageList">'; 
+                listAppendage += '<a href="' + articleLink + '"><div class="articleImg"'
+                listAppendage +=  'style="background-image:url(' + image + ')"></div>';
+                listAppendage += '<p>' + articleText + '</p>';
+                listAppendage += '</a></li>';
             })
 
             $('#newsFlex').append(listAppendage);
@@ -41,6 +43,11 @@ $(function(){
         })
         .always(function(){
             $('header').addClass('animateHead');
+            $('#loaderGif').css('visibility', 'visible');
+
+            $('#newsFlex').change(function(){
+                $('#loaderGif').css('display', 'none');
+            })
         })
     })
 })

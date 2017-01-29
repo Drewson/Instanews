@@ -9,7 +9,7 @@ footer {
         justify-content: center;
 
         p {
-            color: #c2c2c2;
+            color: $medium-grey;
             text-align: center;
 
         }
@@ -17,6 +17,5 @@ footer {
 
     @include desktop {
         justify-content: flex-start;
-
     }    
 }
