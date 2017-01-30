@@ -93,12 +93,14 @@ header {
       align-items: center;
   transition: all 1s ease; }
   header #iconContainer {
+    transition: all .5s;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
     margin-right: 20px; }
   header #categoriesContainer {
+    transition: all .5s;
     width: 125px;
     display: -ms-flexbox;
     display: flex;
@@ -109,8 +111,7 @@ header {
     -ms-flex-line-pack: center;
         align-content: center; }
     header #categoriesContainer label {
-      width: 250px;
-      padding: 15px 0;
+      padding: 15px 0px;
       font-size: 14px; }
     header #categoriesContainer select {
       height: 30px;
@@ -122,6 +123,8 @@ header {
           flex-direction: row;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
+      header label {
+        width: 250px; }
       header #iconContainer img {
         width: 21vw; }
       header #categoriesContainer label {
@@ -135,18 +138,20 @@ header {
           justify-content: flex-start;
       -ms-flex-direction: row;
           flex-direction: row; }
+      header label {
+        width: 250px; }
       header #categoriesContainer label {
         font-size: 16px; } }
 
 .animateHead {
   height: auto;
-  padding: 0;
-  margin-right: 300px; }
+  padding: 0px; }
   .animateHead img {
     width: 150px;
     height: 150px; }
   @media (min-width: 600px) and (max-width: 999px) {
     .animateHead {
+      margin-right: 200px;
       height: 0;
       -ms-flex-direction: row;
           flex-direction: row;
@@ -222,16 +227,20 @@ header {
       background-position: 50%;
       background-size: cover; }
     #newsFlex li p {
+      height: 0px;
       font-family: 'Open Sans';
       font-size: 16px;
       -ms-flex-item-align: end;
           align-self: flex-end;
-      padding: 10px;
       position: absolute;
       word-spacing: 2px;
       line-height: 25px;
       bottom: 0;
-      background-color: rgba(0, 0, 0, 0.6); }
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: all .1s; }
+    #newsFlex li a:hover p {
+      height: auto;
+      padding: 10px; }
     @media (min-width: 600px) and (max-width: 999px) {
       #newsFlex li {
         -ms-flex: 1 0 50%;
@@ -259,4 +268,5 @@ footer {
   @media (min-width: 1000px) {
     footer {
       -ms-flex-pack: start;
-          justify-content: flex-start; } }
+          justify-content: flex-start;
+      padding-left: 50px; } }

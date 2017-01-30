@@ -17,5 +17,6 @@ footer {
 
     @include desktop {
         justify-content: flex-start;
+        padding-left: 50px;
     }    
 }

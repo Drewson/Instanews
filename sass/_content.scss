@@ -45,15 +45,21 @@
         }
 
         p {
+            height: 0px;
             font-family: 'Open Sans';
             font-size: 16px;
             align-self: flex-end;
-            padding: 10px;
             position: absolute;
             word-spacing: 2px;
             line-height: 25px;
             bottom: 0;
             background-color: rgba(0, 0, 0, 0.6);
+            transition: all .1s;
+        }
+
+        a:hover p {
+            height: auto;
+            padding: 10px;
         }
 
         @include tablet {
