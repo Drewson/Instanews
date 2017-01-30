@@ -1,10 +1,10 @@
 
 #loaderGif {
     width: 100%; 
-    visibility: hidden;
     display: flex; 
 
         img {
+            display: none;
             justify-content: center;
             top: 300px;
             left: 48%;

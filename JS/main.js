@@ -6,7 +6,9 @@ $(function(){
         event.preventDefault();
         $('#newsFlex').empty();
 
-        var chosenCategory = $('#categories option:selected').text().toLowerCase(); 
+        $('#loaderGif img').show();
+
+        chosenCategory = $('#categories option:selected').text().toLowerCase(); 
 
         var url = 'https://api.nytimes.com/svc/topstories/v2/' + chosenCategory + '.json';
         url += '?' + $.param({'api-key': 'da52f7a32bda4e16bac25f88e3162265'});
@@ -23,7 +25,6 @@ $(function(){
                 return value.multimedia.length > 0;
             }).slice(0,12);
 
-
             $.each(filteredArray, function(key, value){
                 var image = value.multimedia[4].url;
                 var articleText = value.abstract;
@@ -39,15 +40,16 @@ $(function(){
             $('#newsFlex').append(listAppendage);
         })
         .fail(function(){
-            
+            $('#newsFlex').append('<li> Error Retrieving data from NYT.. </li>')
+            $('#loaderGif img').hide();
         })
         .always(function(){
-            $('header').addClass('animateHead');
-            $('#loaderGif').css('visibility', 'visible');
 
-            $('#newsFlex').change(function(){
-                $('#loaderGif').css('display', 'none');
-            })
+            $(document).ajaxComplete(function(){
+                $('#loaderGif img').hide();
+            });
+
+            $('header').addClass('animateHead');
         })
     })
 })
