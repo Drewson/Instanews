@@ -5,13 +5,10 @@ INNSTANEWS -
     article item takes you to the corresponding NYT page.
 
 BUILT WITH -
-    -Gulp - and a few plugins.
     -SASS
     -CSS
     -JavaScript
     -JQuery
     -eslint
     -HTML5
-
-Author -
-    Andrew Nelson (but not really..)..
+    -Gulp - and a few plugins.
