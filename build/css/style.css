@@ -82,7 +82,7 @@ header {
   max-width: 100%;
   height: 90vh;
   margin: 0;
-  padding: 0;
+  padding: 30px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -96,7 +96,8 @@ header {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
-        justify-content: center; }
+        justify-content: center;
+    margin-right: 20px; }
   header #categoriesContainer {
     width: 125px;
     display: -ms-flexbox;
@@ -108,33 +109,39 @@ header {
     -ms-flex-line-pack: center;
         align-content: center; }
     header #categoriesContainer label {
+      width: 250px;
       padding: 15px 0;
-      text-align: center;
       font-size: 14px; }
     header #categoriesContainer select {
       height: 30px;
       font-size: 20px; }
   @media (min-width: 600px) and (max-width: 999px) {
     header {
+      height: 90vh;
       -ms-flex-direction: row;
           flex-direction: row;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
       header #iconContainer img {
-        width: 21vw; } }
+        width: 21vw; }
+      header #categoriesContainer label {
+        font-size: 14px; } }
   @media (min-width: 1000px) {
     header {
-      padding-left: 50px;
+      width: 300px;
       -ms-flex-align: center;
           align-items: center;
       -ms-flex-pack: start;
           justify-content: flex-start;
       -ms-flex-direction: row;
-          flex-direction: row; } }
+          flex-direction: row; }
+      header #categoriesContainer label {
+        font-size: 16px; } }
 
 .animateHead {
   height: 300px;
-  padding: 0; }
+  padding: 0;
+  margin-right: 300px; }
   .animateHead img {
     width: 150px;
     height: 150px; }
@@ -148,13 +155,13 @@ header {
           justify-content: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
-      padding: 20px 80px; }
+      padding: 20px 50px; }
       .animateHead #categoriesContainer {
         margin: 0 0 0px 30px; }
       .animateHead #iconContainer {
         height: 30px; }
       .animateHead img {
-        padding-top: 20px;
+        padding-top: 15px;
         width: 140px;
         height: 65px; } }
   @media (min-width: 1000px) {
