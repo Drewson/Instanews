@@ -1,6 +1,8 @@
 $(function(){
     
-    $('#categories').change( '#categories option:selected', function(event){ //When selec option is changed, this runs
+    $('select').selectric();
+
+    $('select').change( '#categories option:selected', function(event){ //When selec option is changed, this runs
         event.preventDefault();
         $('#newsFlex').empty(); //Empties the UL of all articles, everytime selection is changed
 
