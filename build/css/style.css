@@ -66,9 +66,7 @@ header {
     transition: margin 1s;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: center;
-        justify-content: center;
-    margin-right: 100px; }
+    margin: 10px auto; }
   header #categoriesContainer {
     width: 125px;
     display: -ms-flexbox;
@@ -81,6 +79,7 @@ header {
         align-content: center; }
     header #categoriesContainer label {
       padding: 15px 0px;
+      text-align: center;
       font-size: 14px; }
     header #categoriesContainer select {
       height: 30px;
@@ -93,8 +92,9 @@ header {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
       header label {
-        width: 250px;
-        text-align: left; }
+        width: 130px; }
+      header #iconContainer {
+        margin: 0; }
       header #iconContainer img {
         width: 21vw; }
       header #categoriesContainer label {
@@ -109,7 +109,7 @@ header {
       -ms-flex-direction: row;
           flex-direction: row; }
       header label {
-        width: 250px; }
+        width: 130px; }
       header #categoriesContainer label {
         font-size: 16px; } }
 

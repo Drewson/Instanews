@@ -11,8 +11,7 @@ header {
     #iconContainer {
         transition: margin 1s;
         display: flex;
-        justify-content: center;
-        margin-right: 100px;
+        margin: 10px auto;
     }
 
     #categoriesContainer {
@@ -25,6 +24,7 @@ header {
 
         label {
             padding: 15px 0px;
+            text-align: center;
             font-size: 14px;
         }
 
@@ -39,10 +39,14 @@ header {
         height: 90vh;
         flex-direction: row;
         flex-wrap: wrap;
+        
 
         label {
             width: $label-width;
-            text-align: left;
+        }
+
+        #iconContainer {
+            margin: 0;
         }
 
         #iconContainer img {

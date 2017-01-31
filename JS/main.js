@@ -1,5 +1,7 @@
 $(function(){
-    console.log("hello");
+
+    // $('select').selectric();
+
     $('#categories').change( '#categories option:selected', function(event){
         event.preventDefault();
         $('#newsFlex').empty();
