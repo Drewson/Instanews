@@ -1,11 +1,10 @@
 $(function(){
-
-
-    $('#categories').change( '#categories option:selected', function(event){
+    
+    $('#categories').change( '#categories option:selected', function(event){ //When selec option is changed, this runs
         event.preventDefault();
-        $('#newsFlex').empty();
+        $('#newsFlex').empty(); //Empties the UL of all articles, everytime selection is changed
 
-        $('#loaderGif img').show();
+        $('#loaderGif img').show();  //Displays the ajax loader
 
         var chosenCategory = $('#categories option:selected').text().toLowerCase(); 
 
@@ -27,6 +26,7 @@ $(function(){
                 var articleText = value.abstract;
                 var articleLink = value.url;
             
+                //This area creates a long string, of the list items to be appended on the UL
                 listAppendage += '<li>'; 
                 listAppendage += '<a href="' + articleLink + '">';
                 listAppendage += '<div class="articleImg" style="background-image:url(' + image + ')"></div>';
@@ -36,13 +36,13 @@ $(function(){
 
             $('#newsFlex').append(listAppendage);
         })
-        .fail(function(){
-            $('#newsFlex').append('<li> Error Retrieving data from NYT.. </li>')
+        .fail(function(){ //Code to run when no data is recieved from NYT
+            $('#newsFlex').append('<li> Error Retrieving data from NYT.. </li>') 
             $('#loaderGif img').hide();
         })
-        .always(function(){
+        .always(function(){ //This code runs, whether or not the NYT ajax call worked.
 
-            $(document).ajaxComplete(function(){
+            $(document).ajaxComplete(function(){ 
                 $('#loaderGif img').hide();
             });
 

@@ -1,5 +1,5 @@
 
-#loaderGif {
+#loaderGif {    //This is the Ajax loader
     width: 100%; 
     display: flex; 
 
@@ -12,7 +12,7 @@
     }
 }
 
-#newsFlex {
+#newsFlex {     //This is a UL that contains the article list items
     display: flex;
     flex-wrap: wrap;
     width: 100%;

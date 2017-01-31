@@ -8,13 +8,13 @@ header {
     justify-content: center;
     align-items: center;
 
-    #iconContainer {
+    #iconContainer {            //Contains my icon image
         transition: margin 1s;
         display: flex;
         margin: 10px auto;
     }
 
-    #categoriesContainer {
+    #categoriesContainer {  // Contains the selec and label
         width: 125px;
         display: flex;
         flex-direction: column;
@@ -35,7 +35,7 @@ header {
 
     }
 
-    @include tablet {
+    @include tablet { // breakpoint for 600px
         height: 90vh;
         flex-direction: row;
         flex-wrap: wrap;
@@ -59,7 +59,7 @@ header {
         }
     }
 
-    @include desktop {
+    @include desktop {  //breakpoint for 1000px
         width: 500px;
         align-items: center;
         justify-content: flex-start;
@@ -79,7 +79,7 @@ header {
     }
 }
 
-.animateHead {
+.animateHead {   //This class is added after an option is selected
     height: auto;
     padding: 20px;
 
