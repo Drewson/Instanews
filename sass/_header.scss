@@ -1,31 +1,21 @@
-body {
-    background-color: black;
-    color: white;
-    max-width: 100%;
-    font-family: 'Open Sans', serif;
-    font-weight: lighter;
-}
 
 header {
     max-width: 100%;
     height: 90vh;
     margin: 0;
-    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 1s ease;
 
     #iconContainer {
-        transition: all .5s;
+        transition: margin 1s;
         display: flex;
         justify-content: center;
-        margin-right: 20px;
+        margin-right: 100px;
     }
 
     #categoriesContainer {
-        transition: all .5s;
         width: 125px;
         display: flex;
         flex-direction: column;
@@ -52,6 +42,7 @@ header {
 
         label {
             width: $label-width;
+            text-align: left;
         }
 
         #iconContainer img {
@@ -88,6 +79,10 @@ header {
         height: 150px;
     }
 
+    select {
+        margin-bottom: 20px;
+    }
+
     @include tablet {
         margin-right: 200px;
         height: 0;
@@ -97,12 +92,17 @@ header {
         align-items: flex-start;
         padding: 20px 50px;
 
+        select {
+            margin: 0;
+        }
+
         #categoriesContainer {
             margin: 0 0 0px 30px;
         }
 
         #iconContainer {
             height: 30px;
+            margin-right: 0;
         }
 
         img {
@@ -117,8 +117,16 @@ header {
         height: 130px;
         justify-content: flex-start;
 
+        select {
+            margin: 0;
+        }
+
         #categoriesContainer {
             margin: 0 0 25px 20px;
+        }
+
+        #iconContainer {
+            margin-right: 0;
         }
 
         img {
