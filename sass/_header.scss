@@ -23,7 +23,7 @@ header {
         
 
         label {
-            padding: 15px 0px;
+            padding: 10px 0px;
             text-align: center;
             font-size: 14px;
         }
@@ -46,6 +46,7 @@ header {
         }
 
         #iconContainer {
+            display: block;
             margin: 0;
         }
 
@@ -59,13 +60,17 @@ header {
     }
 
     @include desktop {
-        width: 300px;
+        width: 500px;
         align-items: center;
         justify-content: flex-start;
         flex-direction: row;
 
         label {
             width: $label-width;
+        }
+
+        #iconContainer {
+            width: 300px;
         }
 
         #categoriesContainer label {
@@ -76,7 +81,7 @@ header {
 
 .animateHead {
     height: auto;
-    padding: 0px;
+    padding: 20px;
 
     img {
         width: 150px;
@@ -117,6 +122,8 @@ header {
     }
 
     @include desktop {
+        padding: 0;
+        width: 300px;
         flex-direction: row;
         height: 130px;
         justify-content: flex-start;

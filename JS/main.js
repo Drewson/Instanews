@@ -1,6 +1,5 @@
 $(function(){
 
-    // $('select').selectric();
 
     $('#categories').change( '#categories option:selected', function(event){
         event.preventDefault();
