@@ -21,7 +21,7 @@ $(function(){
 
             var filteredArticles = articlesResults.filter(function(value){
                 return value.multimedia.length > 0;
-            }).slice(0,12);
+            }).splice(0,12);
 
             $.each(filteredArticles, function(key, value){
                 var image = value.multimedia[4].url;

@@ -1,24 +1,30 @@
-footer {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0 50px 0;
-    font-size: 14px;
+// footer {
+//     display: flex;
+//     justify-content: center;
+//     padding: 20px 0 50px 0;
+//     font-size: 14px;
 
-    div {
-        display: flex;
-        justify-content: center;
+    
+// div {
+//         display: flex;
+//         justify-content: center;
 
-        p {
-            color: $medium-grey;
-            text-align: center;
+//     }
 
-        }
+p {
+    color: $medium-grey;
+    text-align: center;
+    text-transform:uppercase;
     }
+
+span{
+    text-transform:uppercase;
+}
+
 
     @include desktop {
         justify-content: flex-start;
         padding-left: 50px;
-
         padding-bottom: 50px;
     }    
 }
