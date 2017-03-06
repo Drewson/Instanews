@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
+    babel = require('gulp-babel'),
     cssnano = require('gulp-cssnano');
 
     var plumberErrorHandler = {
@@ -20,6 +21,7 @@ var gulp = require('gulp'),
 gulp.task('scripts', ['lint'], function(){
     gulp.src('./JS/*.js')
         .pipe(notify())
+        .pipe(babel())
         .pipe(uglify())
         .pipe(rename({ extname: '.min.js' }))
         .pipe(gulp.dest('./build/js'))
@@ -27,7 +29,7 @@ gulp.task('scripts', ['lint'], function(){
 })
 
 gulp.task('lint', function(){
-    return gulp.src(['js/*.js'])
+    return gulp.src(['javascript/*.js'])
         .pipe(plumber(plumberErrorHandler))
         .pipe(eslint())
         .pipe(eslint.format())
