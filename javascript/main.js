@@ -8,6 +8,7 @@ $(function(){
 
         const chosenCategory = $('.categories option:selected').val(); 
 
+        //NYT AJAX CALL
          let url = 'https://api.nytimes.com/svc/topstories/v2/' + chosenCategory + '.json?api-key=da52f7a32bda4e16bac25f88e3162265'
         $.ajax({
             method : 'GET',

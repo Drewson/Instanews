@@ -62,11 +62,13 @@ header {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center; }
+
   header .iconContainer {
     transition: margin 1s;
     display: -ms-flexbox;
     display: flex;
     margin: 10px auto; }
+
   header .categoriesContainer {
     width: 125px;
     display: -ms-flexbox;
@@ -77,30 +79,40 @@ header {
         flex-wrap: wrap;
     -ms-flex-line-pack: center;
         align-content: center; }
+
     header .categoriesContainer label {
       padding: 10px 0px;
       text-align: center;
       font-size: 14px; }
+
     header .categoriesContainer select {
       height: 30px;
       font-size: 20px; }
+
   @media (min-width: 600px) and (max-width: 999px) {
+
     header {
       height: 90vh;
       -ms-flex-direction: row;
           flex-direction: row;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
+
       header label {
         width: 130px; }
+        
       header .iconContainer {
         display: block;
         margin: 0; }
+
       header .iconContainer img {
         width: 21vw; }
+
       header .categoriesContainer label {
         font-size: 14px; } }
+
   @media (min-width: 1000px) {
+
     header {
       width: 500px;
       -ms-flex-align: center;
@@ -109,22 +121,29 @@ header {
           justify-content: flex-start;
       -ms-flex-direction: row;
           flex-direction: row; }
+
       header label {
         width: 130px; }
+
       header .iconContainer {
         width: 300px; }
+        
       header .categoriesContainer label {
         font-size: 16px; } }
 
 .animateHead {
   height: auto;
   padding: 20px; }
+
   .animateHead img {
     width: 150px;
     height: 150px; }
+
   .animateHead select {
     margin-bottom: 20px; }
+
   @media (min-width: 600px) and (max-width: 999px) {
+
     .animateHead {
       margin-right: 200px;
       height: 0;
@@ -136,18 +155,24 @@ header {
       -ms-flex-align: start;
           align-items: flex-start;
       padding: 20px 50px; }
+
       .animateHead select {
         margin: 0; }
+
       .animateHead .categoriesContainer {
         margin: 0 0 0px 30px; }
+        
       .animateHead .iconContainer {
         height: 30px;
         margin-right: 0; }
+
       .animateHead img {
         padding-top: 15px;
         width: 140px;
         height: 65px; } }
+
   @media (min-width: 1000px) {
+
     .animateHead {
       padding: 0;
       width: 300px;
@@ -156,12 +181,16 @@ header {
       height: 130px;
       -ms-flex-pack: start;
           justify-content: flex-start; }
+
       .animateHead select {
         margin: 0; }
+
       .animateHead .categoriesContainer {
         margin: 0 0 25px 20px; }
+
       .animateHead .iconContainer {
         margin-right: 0; }
+
       .animateHead img {
         width: 140px;
         height: 65px; } }
@@ -170,6 +199,7 @@ header {
   width: 100%;
   display: -ms-flexbox;
   display: flex; }
+
   .loaderGif img {
     display: none;
     left: 48%;
@@ -182,52 +212,63 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%; }
+  width: 100%;
+}
+
+.newsFlex li {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1 0 100%;
+      flex: 1 0 100%;
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  background-size: cover; }
+
+.newsFlex li a {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  color: white; }
+
+.articleImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: 50%;
+  background-size: cover; }
+
+.newsFlex li p {
+  height: 0;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  position: absolute;
+  word-spacing: 2px;
+  line-height: 25px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all .1s; }
+
+.newsFlex li a:hover p {
+  height: auto;
+  padding: 10px; }
+
+@media (min-width: 600px) and (max-width: 999px) {
+  
   .newsFlex li {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex: 1 0 100%;
-        flex: 1 0 100%;
-    height: 420px;
-    overflow: hidden;
-    position: relative;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center;
-    background-size: cover; }
-    .newsFlex li a {
-      text-decoration: none;
-      width: 100%;
-      height: 100%;
-      color: white; }
-    .newsFlex li .articleImg {
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-position: 50%;
-      background-size: cover; }
-    .newsFlex li p {
-      height: 0;
-      font-family: 'Open Sans';
-      font-size: 16px;
-      position: absolute;
-      word-spacing: 2px;
-      line-height: 25px;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-      transition: all .1s; }
-    .newsFlex li a:hover p {
-      height: auto;
-      padding: 10px; }
-    @media (min-width: 600px) and (max-width: 999px) {
-      .newsFlex li {
-        -ms-flex: 1 0 50%;
-            flex: 1 0 50%; } }
-    @media (min-width: 1000px) {
-      .newsFlex li {
-        -ms-flex: 1 0 25%;
-            flex: 1 0 25%; } }
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%; } 
+  }
+
+  @media (min-width: 1000px) {
+    .newsFlex li {
+      -ms-flex: 1 0 25%;
+          flex: 1 0 25%; } 
+  }
 
 .copyright {
   display: -ms-flexbox;
@@ -236,15 +277,18 @@ header {
       justify-content: center;
   padding: 20px 0 50px 0;
   font-size: 14px; }
+
   .copyright div {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center; }
+
     .copyright div p {
       color: #c2c2c2;
       text-align: center; }
   @media (min-width: 1000px) {
+
     .copyright {
       -ms-flex-pack: start;
           justify-content: flex-start;
